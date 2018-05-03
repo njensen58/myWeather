@@ -17,22 +17,22 @@ class WeatherDisplay extends Component {
     }
 
 
-    componentDidMount(){
-        fetch (`https://api.openweathermap.org/data/2.5/weather?q=Salt+Lake+City&units=imperial&APPID=`)
-            .then(res => res.json())
-            .then(res => this.setState({
-                cityName: res.name,
-                coord: res.coord,
-                description: [...res.weather],
-                currentWeather: [res.main],
-                sun: [res.sys],
-                conditions: {
-                    wind: [res.wind],
-                    rain: [res.rain],
-                    clouds: [res.clouds]
-                }
-            }))
-    }
+    // componentDidMount(){
+    //     fetch (`https://api.openweathermap.org/data/2.5/weather?q=Salt+Lake+City&units=imperial&APPID=`)
+    //         .then(res => res.json())
+    //         .then(res => this.setState({
+    //             cityName: res.name,
+    //             coord: res.coord,
+    //             description: [...res.weather],
+    //             currentWeather: [res.main],
+    //             sun: [res.sys],
+    //             conditions: {
+    //                 wind: [res.wind],
+    //                 rain: [res.rain],
+    //                 clouds: [res.clouds]
+    //             }
+    //         }))
+    // }
 
 
     render() {
